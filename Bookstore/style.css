@@ -1,0 +1,93 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    margin: 100;
+    padding: 100;
+    background-color: #f8f9fa;
+    text-align: center;
+    font-size: 19;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 100px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 100px;
+}
+
+.book {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    background: #ffcc99;
+}
+
+.contact-form {
+    font-family: Arial, sans-serif;
+    color:  #ccffff;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+img{
+    height: 400px;
+    width: 300px;
+    
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 5px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.book {
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
