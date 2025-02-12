@@ -1,6 +1,6 @@
 package newassgn;
 
-public class tasskoo4 extends Thread2{
+public class task4 extends Thread2{
 
 	
 	public static void main(String[] args) {
