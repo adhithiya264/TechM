@@ -31,11 +31,11 @@ public class taskset2 {
 		linkedHashSet.add("honda");
 		linkedHashSet.add("suzuki");
 		linkedHashSet.add("kawasaki");
-		linkedHashSet.add("nigga");
-		linkedHashSet.add("deez");
+		linkedHashSet.add("tvs");
+		linkedHashSet.add("hyundai");
 		linkedHashSet.add("ultraviolette");
-		linkedHashSet.add("ligma");
-		linkedHashSet.add("skibidi");
+		linkedHashSet.add("yamaha");
+		linkedHashSet.add("ktm");
 
 
 		linkedHashSet.remove("Papaya");
