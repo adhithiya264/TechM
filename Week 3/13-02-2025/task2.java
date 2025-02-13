@@ -28,14 +28,14 @@ public class taskset2 {
 
 	
 		Set<String> linkedHashSet = new LinkedHashSet<>();
-		linkedHashSet.add("Apple");
-		linkedHashSet.add("Banana");
-		linkedHashSet.add("Cherry");
-		linkedHashSet.add("Peach");
-		linkedHashSet.add("Mango");
-		linkedHashSet.add("Orange");
-		linkedHashSet.add("Grapes");
-		linkedHashSet.add("Papaya");
+		linkedHashSet.add("honda");
+		linkedHashSet.add("suzuki");
+		linkedHashSet.add("kawasaki");
+		linkedHashSet.add("nigga");
+		linkedHashSet.add("deez");
+		linkedHashSet.add("ultraviolette");
+		linkedHashSet.add("ligma");
+		linkedHashSet.add("skibidi");
 
 
 		linkedHashSet.remove("Papaya");
