@@ -1,3 +1,5 @@
+//Create a variable as const, check if its a prime number or not, and display the result accordingly
+
 const number = 29;
 
 function isPrime(num) {
