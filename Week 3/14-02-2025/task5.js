@@ -1,3 +1,4 @@
+//Create a confirmation box , to check if the user will go the film today and display the result
 
 let willGoToFilm = confirm("Will you go to the film today?");
 
