@@ -1,3 +1,5 @@
+//Check for a number, if its divisible by 12 using if statement
+
 let number = 24; 
 if (number % 12 === 0) {
   console.log(number + " is divisible by 12.");
