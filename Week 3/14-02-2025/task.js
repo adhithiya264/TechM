@@ -113,4 +113,49 @@ if (isLeapYear(year)) {
   console.log("The given year is not a leap year.");
 }
 
+//task10
+
+
+let mathScore = 92;
+
+if (mathScore === 100) {
+  console.log("Phenomenal!");
+} else if (mathScore > 85) {
+  console.log("Excellent!");
+} else if (mathScore >= 71 && mathScore <= 85) {
+  console.log("Good work!");
+} else if (mathScore >= 51 && mathScore <= 70) {
+  console.log("Practice well!");
+} else {
+  console.log("Hard work is needed");
+}
+
+
+//task11
+
+let dayOfWeek = "Monday"; 
+switch(dayOfWeek) {
+  case "Monday":
+    console.log("Start of the week!");
+    break;
+  case "Tuesday":
+  case "Wednesday":
+  case "Thursday":
+    console.log("Mid of the week!");
+    break;
+  case "Friday":
+    console.log("Last working day of the week!");
+    break;
+  case "Saturday":
+    console.log("WeekEnd - Saturday!");
+    break;
+  case "Sunday":
+    console.log("WeekEnd - Sunday!");
+    break;
+  default:
+    console.log("Invalid input!");
+}
+
+
+
 
