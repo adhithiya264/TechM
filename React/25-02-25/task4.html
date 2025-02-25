@@ -8,11 +8,10 @@
 <body>
   <div id="root"></div>
 
-  <!-- React and ReactDOM CDN -->
+
   <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
 
-  <!-- Babel CDN (for JSX) -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script type="text/babel">
@@ -30,7 +29,7 @@
         const vowels = ['a', 'e', 'i', 'o', 'u'];
         let containsVowel = false;
 
-        // Check if the string contains any vowels
+
         for (let i = 0; i < inputString.length; i++) {
           if (vowels.includes(inputString[i].toLowerCase())) {
             containsVowel = true;
@@ -38,17 +37,17 @@
           }
         }
 
-        // 1. Using If condition
+
         if (containsVowel) {
           setMessage('The string contains at least one vowel.');
         } else {
           setMessage('The string does not contain any vowels.');
         }
 
-        // 2. Using Logical && (Only logs the message if true)
+
         containsVowel && console.log('The string contains a vowel using &&.');
 
-        // 3. Using Ternary Operator
+
         const result = containsVowel 
           ? 'The string contains at least one vowel.' 
           : 'The string does not contain any vowels.';
