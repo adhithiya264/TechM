@@ -8,11 +8,9 @@
 <body>
   <div id="root"></div>
 
-  <!-- React and ReactDOM CDN -->
   <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
 
-  <!-- Babel CDN (for JSX) -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script type="text/babel">
@@ -27,23 +25,20 @@
       };
 
       const checkArrayLength = () => {
-        // Convert the input string into an array of numbers
+      
         const array = arrayString.split(',').map(item => parseInt(item.trim(), 10));
-
-        // Check if the array length is a multiple of 3
+     
         const arrayLength = array.length;
-
-        // 1. Using If condition
+      
         if (arrayLength % 3 === 0) {
           setMessage(`The number of elements in the array (${arrayLength}) is a multiple of 3.`);
         } else {
           setMessage(`The number of elements in the array (${arrayLength}) is not a multiple of 3.`);
         }
-
-        // 2. Using Logical && (Only logs the message if true)
+       
         arrayLength % 3 === 0 && console.log(`The number of elements in the array is a multiple of 3 using &&.`);
 
-        // 3. Using Ternary Operator
+    
         const result = arrayLength % 3 === 0 
           ? `The number of elements in the array (${arrayLength}) is a multiple of 3.` 
           : `The number of elements in the array (${arrayLength}) is not a multiple of 3.`;
