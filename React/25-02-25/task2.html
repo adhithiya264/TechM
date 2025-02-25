@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Even or Odd Length Checker</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+  <!-- Babel CDN (for JSX) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [inputString, setInputString] = useState('');
+      const [message, setMessage] = useState('');
+
+      const handleChange = (event) => {
+        setInputString(event.target.value);
+      };
+
+      const checkLength = () => {
+        const length = inputString.length;
+
+        // 1. Using If condition
+        if (length % 2 === 0) {
+          setMessage('The string length is even.');
+        } else {
+          setMessage('The string length is odd.');
+        }
+
+        // 2. Using Logical && (Only logs the message if true)
+        length % 2 === 0 && console.log('The string length is even using &&.');
+
+        // 3. Using Ternary Operator
+        const result = length % 2 === 0 ? 'The string length is even.' : 'The string length is odd.';
+        console.log(result);
+      };
+
+      return (
+        <div>
+          <h1>Even or Odd Length Checker</h1>
+          <input
+            type="text"
+            value={inputString}
+            onChange={handleChange}
+            placeholder="Enter a string"
+          />
+          <button onClick={checkLength}>Check Length</button>
+          <p>{message}</p>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
