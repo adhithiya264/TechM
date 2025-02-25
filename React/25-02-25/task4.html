@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vowel Checker</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+  <!-- Babel CDN (for JSX) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [inputString, setInputString] = useState('');
+      const [message, setMessage] = useState('');
+
+      const handleChange = (event) => {
+        setInputString(event.target.value);
+      };
+
+      const checkForVowels = () => {
+        const vowels = ['a', 'e', 'i', 'o', 'u'];
+        let containsVowel = false;
+
+        // Check if the string contains any vowels
+        for (let i = 0; i < inputString.length; i++) {
+          if (vowels.includes(inputString[i].toLowerCase())) {
+            containsVowel = true;
+            break;
+          }
+        }
+
+        // 1. Using If condition
+        if (containsVowel) {
+          setMessage('The string contains at least one vowel.');
+        } else {
+          setMessage('The string does not contain any vowels.');
+        }
+
+        // 2. Using Logical && (Only logs the message if true)
+        containsVowel && console.log('The string contains a vowel using &&.');
+
+        // 3. Using Ternary Operator
+        const result = containsVowel 
+          ? 'The string contains at least one vowel.' 
+          : 'The string does not contain any vowels.';
+        console.log(result);
+      };
+
+      return (
+        <div>
+          <h1>Vowel Checker</h1>
+          <input
+            type="text"
+            value={inputString}
+            onChange={handleChange}
+            placeholder="Enter a string"
+          />
+          <button onClick={checkForVowels}>Check for Vowels</button>
+          <p>{message}</p>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
