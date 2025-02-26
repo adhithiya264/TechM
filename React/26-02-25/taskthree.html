@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student List</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const students = [
+      { id: 1, name: 'Alice', department: 'Computer Science' },
+      { id: 2, name: 'Bob', department: 'Mechanical Engineering' },
+      { id: 3, name: 'Charlie', department: 'Electrical Engineering' },
+      { id: 4, name: 'Diana', department: 'Civil Engineering' },
+      { id: 5, name: 'Eva', department: 'Biotechnology' }
+    ];
+
+    function App() {
+      return (
+        <div>
+          <h1>Student List</h1>
+          <table border="1" cellPadding="10">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              {students.map(student => (
+                <tr key={student.id}>
+                  <td>{student.id}</td>
+                  <td>{student.name}</td>
+                  <td>{student.department}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
