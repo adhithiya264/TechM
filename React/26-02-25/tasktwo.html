@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Availability Checker</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [hasAadhar, setHasAadhar] = useState(false);
+      const [hasPAN, setHasPAN] = useState(false);
+      const [message, setMessage] = useState('');
+
+      const handleAadharChange = () => {
+        setHasAadhar(!hasAadhar);
+      };
+
+      const handlePANChange = () => {
+        setHasPAN(!hasPAN);
+      };
+
+      const checkCards = () => {
+        if (hasAadhar || hasPAN) {
+          let availableCards = '';
+          if (hasAadhar) availableCards += 'Aadhar Card, ';
+          if (hasPAN) availableCards += 'PAN Card';
+
+          setMessage(`You have the following card(s) available: ${availableCards}`);
+        } else {
+          setMessage('You do not have any eligible cards for the offer.');
+        }
+      };
+
+      return (
+        <div>
+          <h1>Government Offer Card Checker</h1>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={hasAadhar}
+                onChange={handleAadharChange}
+              />
+              Aadhar Card
+            </label>
+          </div>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={hasPAN}
+                onChange={handlePANChange}
+              />
+              PAN Card
+            </label>
+          </div>
+          <button onClick={checkCards}>Check Eligibility</button>
+          <p>{message}</p>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
