@@ -1,0 +1,395 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('movie2.avif'); /* Replace with your image URL */
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Make the image cover the entire background */
+    background-attachment: fixed; /* Optional: Keeps the background fixed during scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-width: 1000px;
+    max-height: 1000px;
+    color: #333; /* Ensure text remains readable */
+}
+
+
+/* Header & Navbar */
+header {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Hero Section */
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Featured Movies Section */
+.featured-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center; /* Center all content inside the featured-movies section */
+    color: #fff;
+    padding: 20px; /* Optional: add padding for spacing */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(76, 2, 2, 0.1); /* Optional: subtle shadow */
+}
+
+/* Featured Movies Title */
+.featured-movies h2 {
+    grid-column: span 2;
+    font-size: 2rem;
+    color: #fff ; /* Ensure the text color is white with !important */
+    text-align: center; /* Center the "Featured Movies" text */
+}
+
+
+/* Movie Cards */
+.movie-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(155, 4, 4, 0.941);
+    text-align: center;
+    padding: 15px;
+}
+
+.movie-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.movie-item:hover img {
+    transform: scale(1.05); /* Slightly zooms in the image when hovered */
+}
+
+.movie-item h3 {
+    font-size: 1.1rem;
+    color: #c20d0dcd;
+    margin-top: 10px;
+}
+
+.movie-item p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.movie-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.movie-item a:hover {
+    background-color: #444;
+}
+
+/* Movie Details Section */
+.movie-detail {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movie-detail img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.movie-detail h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.movie-detail p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* User Reviews Section */
+.reviews {
+    margin-top: 40px;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.user-reviews h1,
+.user-reviews h2 {
+    text-align: center;
+    color: #ffffff; /* White color */
+}
+
+
+.reviews ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reviews ul li {
+    background-color: #811515;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.reviews ul li p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.add-review {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.add-review h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.add-review form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.add-review label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.add-review input,
+.add-review textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.add-review button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.add-review button:hover {
+    background-color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+/* Movie Descriptions Section */
+.movie-descriptions {
+    padding: 40px 20px;
+    color: #fff; /* Make all text white */
+    text-align: center; /* Centers the title and content */
+}
+
+.movie-detail {
+    background-color: transparent; /* No background for individual movie items */
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none; /* Remove box-shadow */
+    max-width: 900px; /* Limit width for better readability */
+    margin: 0 auto; /* Centers the article in the page */
+}
+
+.movie-detail h2 {
+    font-size: 2rem;
+    color: #fff; /* White text for movie name */
+    margin-bottom: 15px;
+}
+
+.movie-detail p {
+    font-size: 1rem;
+    color: #fff; /* White text for descriptions */
+    line-height: 1.6;
+}
+
+.movie-detail img {
+    width: auto; /* Let the width adjust based on the height */
+    height: 400px; /* Set a consistent height for all posters */
+    object-fit: cover; /* Ensure the image keeps its aspect ratio and fills the space */
+    margin-top: 20px;
+    border-radius: 8px; /* Keep rounded corners */
+    margin-bottom: 20px;
+    display: block; /* Ensures it behaves like a block element */
+    margin-left: auto;
+    margin-right: auto; /* Centers the images horizontally */
+}
+
+
+/* Header - Centering for movie details */
+header {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+/* User Reviews Section */
+.reviews-list {
+    color: #fff; /* Set the text color to white for all review items */
+}
+
+.review-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly dark background for contrast */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.review-item p {
+    font-size: 1rem;
+    color: #fff; /* Ensure all text within reviews is white */
+}
+
+.review-item strong {
+    color: #fff; /* Make sure the 'Username' and 'Rating' bolded text is also white */
+}
+
+
+/* Media Queries (Responsive Design) */
+@media (max-width: 768px) {
+    .featured-movies {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .movie-item {
+        padding: 10px;
+    }
+
+    .movie-detail h1 {
+        font-size: 2rem;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .movie-item {
+        padding: 10px;
+    }
+
+    .movie-detail h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+}

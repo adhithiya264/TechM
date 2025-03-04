@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews - Movie Review Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CINIREV</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movie-descriptions.html">Movie Descriptions</a></li> 
+                <li><a href="user-reviews.html">User Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="user-reviews">
+            <h1>User Reviews</h1>
+
+            <!-- Add Review Form -->
+            <div class="add-review">
+                <h2>Post Your Review</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="username">Your Name:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="movie">Movie Watched:</label>
+                        <input type="text" id="movie" name="movie" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating (1-10):</label>
+                        <input type="number" id="rating" name="rating" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+
+            <!-- Reviews List -->
+            <div class="reviews-list">
+                <article class="review-item">
+                    <p><strong>Username</strong>: John</p>
+                    <p><strong>Movie Watched</strong>: Scary Movie</p>
+                    <p><strong>Rating:</strong> 9/10</p>
+                    <p>Review: This movie was amazing, the plot was engaging, and the characters were well-developed. Definitely one of the best I've seen this year!</p>
+                </article>
+                
+                <article class="review-item">
+                    <p><strong>Username</strong>: Sarah</p>
+                    <p><strong>Movie Watched</strong>: Disaster Movie</p>
+                    <p><strong>Rating:</strong> 7/10</p>
+                    <p>Review: It was an entertaining movie, but I felt the pacing was a bit off in the middle. Still, worth a watch if you're into action films.</p>
+                </article>
+                
+                <article class="review-item">
+                    <p><strong>Username</strong>: Alex</p>
+                    <p><strong>Movie Watched</strong>: Frankie Go Boom</p>
+                    <p><strong>Rating:</strong> 5/10</p>
+                    <p>Review: The movie had a decent plot, but the acting was subpar. It could have been much better with more attention to detail.</p>
+                </article>
+                
+                <article class="review-item">
+                    <p><strong>Username</strong>: Emily</p>
+                    <p><strong>Movie Watched</strong>: Rise of Planet of Snapes</p>
+                    <p><strong>Rating:</strong> 8/10</p>
+                    <p>Review: Great movie! The special effects were stunning, and the storyline kept me hooked from start to finish. Would definitely recommend to friends!</p>
+                </article>
+                
+                <article class="review-item">
+                    <p><strong>Username</strong>: Michael</p>
+                    <p><strong>Movie Watched</strong>: Don't Be a Menace</p>
+                    <p><strong>Rating:</strong> 6/10</p>
+                    <p>Review: It was a decent watch, but I felt like the movie tried to do too much at once. Some scenes were unnecessarily long, and the ending was predictable.</p>
+                </article>
+            
+                <article class="review-item">
+                    <p><strong>Username</strong>: Chris</p>
+                    <p><strong>Movie Watched</strong>: Meet the Spartans</p>
+                    <p><strong>Rating:</strong> 7.5/10</p>
+                    <p>Review: It was a fun parody movie. The humor was hit or miss, but the jokes that landed had me laughing out loud!</p>
+                </article>
+            
+                <article class="review-item">
+                    <p><strong>Username</strong>: Olivia</p>
+                    <p><strong>Movie Watched</strong>: Scary Movie 2</p>
+                    <p><strong>Rating:</strong> 8.5/10</p>
+                    <p>Review: I absolutely loved the sequel! It had all the best moments of the first movie, but with even funnier scenes and parodies. Highly recommend it!</p>
+                </article>
+            </div>
+            
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Movie Review Hub</p>
+    </footer>
+</body>
+</html>
