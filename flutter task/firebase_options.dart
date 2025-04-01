@@ -41,7 +41,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAXR2bj6Cx31NXNvuqHa0OR5eesvri8l5A',
+    apiKey: 'myapikey',
     appId: '1:598599967145:web:0652aba4ef0eb9f7f7a4b8',
     messagingSenderId: '598599967145',
     projectId: 'flutproject2',
@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBKsxuD43rI8oYQ3Ftny2YdEY8MPdijhV4',
+    apiKey: 'myapikey',
     appId: '1:598599967145:android:5e5c926477128994f7a4b8',
     messagingSenderId: '598599967145',
     projectId: 'flutproject2',
@@ -59,7 +59,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDVVrjGcLf28Q4A_c9f7PXNwzFBdjYji8I',
+    apiKey: 'myapikey',
     appId: '1:598599967145:ios:68900725ea352c93f7a4b8',
     messagingSenderId: '598599967145',
     projectId: 'flutproject2',
