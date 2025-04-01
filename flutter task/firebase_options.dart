@@ -68,7 +68,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDVVrjGcLf28Q4A_c9f7PXNwzFBdjYji8I',
+    apiKey: 'myapikey',
     appId: '1:598599967145:ios:68900725ea352c93f7a4b8',
     messagingSenderId: '598599967145',
     projectId: 'flutproject2',
@@ -77,7 +77,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAXR2bj6Cx31NXNvuqHa0OR5eesvri8l5A',
+    apiKey: 'myapikey',
     appId: '1:598599967145:web:b034f58db4b60182f7a4b8',
     messagingSenderId: '598599967145',
     projectId: 'flutproject2',
