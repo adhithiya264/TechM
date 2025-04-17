@@ -19,7 +19,7 @@ class _AddTeamsPageState extends State<AddTeamsPage> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   void _addMatch() {
-    _firestore.collection('football_matches').add({  // Use football_matches collection
+    _firestore.collection('football_matches').add({  
       'team1': _team1Controller.text,
       'team2': _team2Controller.text,
       'score1': _score1Controller.text,
@@ -28,7 +28,7 @@ class _AddTeamsPageState extends State<AddTeamsPage> {
       'odds2': _odds2Controller.text,
     });
 
-    // Clear the text fields after adding the match
+    
     _team1Controller.clear();
     _team2Controller.clear();
     _score1Controller.clear();
@@ -36,7 +36,7 @@ class _AddTeamsPageState extends State<AddTeamsPage> {
     _odds1Controller.clear();
     _odds2Controller.clear();
 
-    // Return to the home page after adding
+
     Navigator.pop(context);
   }
 
