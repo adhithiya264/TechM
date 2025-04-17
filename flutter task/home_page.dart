@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'bet_history_page.dart';   // Bet history page
+import 'bet_history_page.dart';   
 
 class HomePage extends StatelessWidget {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.history),
             onPressed: () {
-              // Navigate to the Bet History page
+ 
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => BetHistoryPage()),
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: _firestore.collection('football_matches').snapshots(),  // Use football_matches collection
+        stream: _firestore.collection('football_matches').snapshots(),  
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                 subtitle: Text(
                     'Score: ${match['score1']} - ${match['score2']} \nOdds: ${match['odds1']} - ${match['odds2']}'),
                 onTap: () {
-                  // Show options to place a bet when the user taps the match
+                 
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
-              // Navigate to the Add Teams Page
+     
               Navigator.pushNamed(context, '/add_teams');
             },
             tooltip: 'Add Other Football Teams',
@@ -95,7 +95,7 @@ class HomePage extends StatelessWidget {
           SizedBox(width: 10),
           FloatingActionButton(
             onPressed: () {
-              // Navigate to the Place Bets Page
+             
               Navigator.pushNamed(context, '/place_bets');
             },
             tooltip: 'Place Bets',
@@ -106,16 +106,15 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // Method to place a bet on a match
   void _placeBet(BuildContext context, String matchId, String selectedTeam) {
     FirebaseFirestore.instance.collection('user_bets').add({
       'match_id': matchId,
       'selected_team': selectedTeam,
-      'amount': 100, // This could be a value entered by the user
+      'amount': 100, 
       'timestamp': FieldValue.serverTimestamp(),
     });
 
-    // After placing a bet, show a confirmation message
+    
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Bet placed on $selectedTeam')),
     );
