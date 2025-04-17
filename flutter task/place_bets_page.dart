@@ -6,9 +6,9 @@ class PlaceBetsPage extends StatelessWidget {
 
   PlaceBetsPage({super.key});
 
-  // Method to place a bet on a match
+
   void _placeBet(BuildContext context, String matchId, String selectedTeam, double amount) {
-    // Example: User's bet info
+
     _firestore.collection('user_bets').add({
       'match_id': matchId,
       'selected_team': selectedTeam,
@@ -16,7 +16,7 @@ class PlaceBetsPage extends StatelessWidget {
       'timestamp': FieldValue.serverTimestamp(),
     });
 
-    // After placing a bet, show a confirmation message
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Bet of \$${amount.toStringAsFixed(2)} placed on $selectedTeam')),
     );
@@ -47,7 +47,7 @@ class PlaceBetsPage extends StatelessWidget {
                 title: Text('${match['team1']} vs ${match['team2']}'),
                 subtitle: Text('Odds: ${match['odds1']} - ${match['odds2']}'),
                 onTap: () {
-                  // When user taps the match, show options to place a bet
+
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -59,7 +59,7 @@ class PlaceBetsPage extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text('Which team do you want to bet on?'),
-                            // Amount input field
+                 
                             TextField(
                               keyboardType: TextInputType.numberWithOptions(decimal: true),
                               decoration: InputDecoration(
